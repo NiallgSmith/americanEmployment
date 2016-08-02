@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wages Data</title>
+
+    <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+    <link rel="stylesheet" href="./static/lib/css/dc.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+    <link rel="stylesheet" href="./static/lib/css/introjs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+<body class="application">
+    <div align="center" id="header">
+        <h1>Wages analysis.</h1>
+        <p>Below will be a basic analysis of US wages from 1980 by gender, maritial status, age, work experience, education, rce and region.<hr>
+        The tooltip below will give a guide of the available graphs, the hide button hides this introduction for easier viewing.<hr>Notes; The sample itself is <strong> not </strong>evenly divided on gender, and racially <strong> overwhelmingly </strong> white to start with. It none the less makes for depressing reading, especially I suspect if you are older, female, non-white and poorly educated. One can only hope things have improved since 1980.<hr> Maritial status shown to have no significant impact, and was removed for the sake of clarity. <hr>Thank you!</p>
+    </div>
+
+
+    <div id="overview">
+
+    </div>
+
+    <div id ="gender">
+
+    </div>
+
+    <div id ="race"></div>
+
+    <div id ="married"></div>
+    <div id ="occupation"></div>
+    <div id ="sector"></div>
+    <div id ="union"></div>
+
+    <div id ="occupationBar"></div>
+
+    <div id ="avgoccwage"></div>
+    <div id ="avgoccwageline"></div>
+    <div id ="lastChart"></div>
+
+
+<script src="./static/lib/js/jquery.min.js"></script>
+<script src="./static/lib/js/bootstrap.min.js"></script>
+<script src="./static/lib/js/crossfilter.js"></script>
+<script src="./static/lib/js/d3.js"></script>
+<script src="./static/lib/js/dc.js"></script>
+<script src="./static/lib/js/queue.js"></script>
+<script src="./static/lib/js/keen.min.js"></script>
+<script src="./static/js/graph.js" type="text/javascript"></script>
+<script src="./static/lib/js/intro.js" type="text/javascript"></script>
+
+</body>
+</html>
