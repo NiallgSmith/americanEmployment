@@ -24,11 +24,11 @@ function introGraph(error, wagesJson) {
         else d["wageband"] = 6;
 
         // recode numbers to text, again for presentation reasons.
-        d["SEX 1=Female 0=Male"] = genders[d["SEX 1=Female 0=Male"]];
-        d["RACE 1=Other 2=Hispanic 3=White"] = races[d["RACE 1=Other 2=Hispanic 3=White"]];
-        d['OCCUPATION 1=Management 2=Sales 3=Clerical 4=Service 5=Professional 6=Other'] = occupations[d['OCCUPATION 1=Management 2=Sales 3=Clerical 4=Service 5=Professional 6=Other']]
-        d['SECTOR 0=Other 1=Manufacturing 2=Construction'] = sectors[d['SECTOR 0=Other 1=Manufacturing 2=Construction']]
-        d['UNION 1=Union member 0=Not union member'] = unions[d['UNION 1=Union member 0=Not union member']]
+        d["SEX"] = genders[d["SEX"]];
+        d["RACE"] = races[d["RACE"]];
+        d['OCCUPATION'] = occupations[d['OCCUPATION']]
+        d['SECTOR'] = sectors[d['SECTOR']]
+        d['UNION'] = unions[d['UNION']]
 
     })
 
@@ -59,7 +59,7 @@ function introGraph(error, wagesJson) {
 
     // Pie charts displaying the various basic break downs of the sample group. Gender, Race, occupation etc.
     var gender = ndx.dimension(function (d) {
-        return d["SEX 1=Female 0=Male"]
+        return d["SEX"]
     })
     var groupGender = gender.group();
     var genderChart = dc.pieChart("#gender");
@@ -73,7 +73,7 @@ function introGraph(error, wagesJson) {
 
 
     var race = ndx.dimension(function (d) {
-        return d["RACE 1=Other 2=Hispanic 3=White"]
+        return d["RACE"]
     })
     
     var groupRace = race.group();
@@ -103,7 +103,7 @@ function introGraph(error, wagesJson) {
 
 
     var occupation = ndx.dimension(function (d) {
-        return d['OCCUPATION 1=Management 2=Sales 3=Clerical 4=Service 5=Professional 6=Other']
+        return d['OCCUPATION']
     })
     var groupOccupation = occupation.group();
     var occupationChart = dc.pieChart("#occupation");
@@ -116,7 +116,7 @@ function introGraph(error, wagesJson) {
 
 
     var sector = ndx.dimension(function (d) {
-        return d['SECTOR 0=Other 1=Manufacturing 2=Construction']
+        return d['SECTOR']
     })
     var groupSector = sector.group();
     var sectorChart = dc.pieChart("#sector");
@@ -144,7 +144,7 @@ function introGraph(error, wagesJson) {
 
 
     var union = ndx.dimension(function (d) {
-        return d['UNION 1=Union member 0=Not union member']
+        return d['UNION']
     })
     var groupUnion = union.group();
     var unionChart = dc.pieChart("#union");
