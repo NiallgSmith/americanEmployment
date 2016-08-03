@@ -16,12 +16,12 @@ function introGraph(error, wagesJson) {
     var wages = wagesJson;
     // create wage bands to give us workable bands for graphs.
     wages.forEach(function (d){
-        if (d["WAGE"] <= 5) d["wageband"] = 1;
-        else if (d["WAGE"] <= 10) d["wageband"] = 2;
-        else if (d["WAGE"] <= 15) d["wageband"] = 3;
-        else if (d["WAGE"] <= 20) d["wageband"] = 4;
-        else if (d["WAGE"] <= 25) d["wageband"] = 5;
-        else d["wageband"] = 6;
+        if (d["WAGE"] <= 5) d["wageband"] = 5;
+        else if (d["WAGE"] <= 10) d["wageband"] = 10;
+        else if (d["WAGE"] <= 15) d["wageband"] = 15;
+        else if (d["WAGE"] <= 20) d["wageband"] = 20;
+        else if (d["WAGE"] <= 25) d["wageband"] = 25;
+        else d["wageband"] = 30;
 
         // recode numbers to text, again for presentation reasons.
         d["SEX"] = genders[d["SEX"]];
@@ -50,10 +50,10 @@ function introGraph(error, wagesJson) {
         .group(avgWagesGroup)
         .transitionDuration(500)
         .elasticY(false)
-        .xAxisLabel("Wage")
-        .x(d3.scale.linear().domain([1,7]))
-        //.x(d3.scale.ordinal().domain(["<=5", "<=10", "<=15", "<=20", "<=25", ">25"]))
-        //.xUnits(dc.units.ordinal("5", "10", "15", "20", "25", "30"))
+        .xAxisLabel("Average Wage in Dollars per Hour")
+        .yAxisLabel("Number of persons")
+        .x(d3.scale.linear().domain([5,35]))
+        .gap(-50)
         .yAxis().ticks(6);
 
 
