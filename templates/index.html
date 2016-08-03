@@ -24,16 +24,23 @@
             start with. It none the less makes for depressing reading, especially I suspect if
             you are older, female, non-white and poorly educated. One can only hope things have
             improved since 1980.<hr> Maritial status shown to have no significant impact, and was
-            removed for the sake of clarity. <hr>Thank you!</p>
+            removed for the sake of clarity.<hr> Lastly, please click the "Take the tour!" button
+            for an overview of the various functionality available. The other buttons
+            show and hide this intro.<hr>Thank you!</p>
     </div>
     <button id="show">Show introduction</button> <button id="hide">Hide introduction</button>
+    <button autofocus onclick="javascript:introJs().start();">TAKE THE TOUR!</button>
 
 
-    <div id="overview">
+    <div id="overview" data-step="1" data-intro="This is an overview of the average wages of
+        the sample group. You can select by wage here and see the makeup of those wage earners
+        on the other graphs" style="font-weight: normal" data-position="right">
 
     </div>
 
-    <div id ="gender">
+    <div id ="gender" data-step="2" data-intro="This is the gender pie chart. Selections made on the
+        wages chart will show you the male/female ratio <strong> of those earners</strong> here."
+        style="font-weight: normal" data-position="left">
 
     </div>
 
