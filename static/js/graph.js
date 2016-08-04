@@ -70,8 +70,6 @@ function introGraph(error, wagesJson) {
         .dimension(gender)
         .group(groupGender);
 
-
-
     var race = ndx.dimension(function (d) {
         return d["RACE"]
     })
@@ -84,23 +82,6 @@ function introGraph(error, wagesJson) {
         .transitionDuration(1000)
         .dimension(race)
         .group(groupRace);
-
-// This chart gave little useful information.
-
-    // var married = ndx.dimension(function (d) {
-    //     return d['MARR 0=Unmarried 1=Married']
-    // })
-    // var groupMarried = married.group();
-    // var marriedChart = dc.pieChart("#married");
-    // marriedChart
-    //     .height(440)
-    //     .width(440)
-    //     .radius(180)
-    //     .innerRadius(95)
-    //     .transitionDuration(1000)
-    //     .dimension(married)
-    //     .group(groupMarried);
-
 
     var occupation = ndx.dimension(function (d) {
         return d['OCCUPATION']
@@ -138,6 +119,7 @@ function introGraph(error, wagesJson) {
         .transitionDuration(500)
         .elasticY(false)
         .xAxisLabel("Employment type")
+        .yAxisLabel("Number of persons")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxis().ticks(6);
@@ -179,10 +161,11 @@ function introGraph(error, wagesJson) {
         .height(300)
         .dimension(occupation)
         .group(occwage)
-        .elasticY(true)
+        .elasticY(false)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("Average wage")
+        .xAxisLabel("Average wage per sector")
+        .yAxisLabel("Dollars per hour")
         .valueAccessor(function (p) {
             // console.log(p)
             return p.value.total / p.value.count;
@@ -194,11 +177,12 @@ function introGraph(error, wagesJson) {
         .height(300)
         .dimension(occupation)
         .group(occwage)
-        .elasticY(true)
+        .elasticY(false)
         .colors('red')
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("Average wage")
+        .xAxisLabel("Average wage per sector")
+        .yAxisLabel("Dollars per hour")
         .valueAccessor(function (p) {
             // console.log(p)
             return p.value.total / p.value.count;
@@ -215,14 +199,12 @@ function introGraph(error, wagesJson) {
         .group(groupOccupation)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("Average wage")
-        // .compose([occupationBar,
-        //     occwageLineChart.useRightYAxis()
-        // ])
+        .xAxisLabel("Employment type")
         .compose([
             occupationBar
-            ,
+                .gap(25),
             occwageLineChart.useRightYAxis(true)
+                
                 ])
         .yAxisLabel("Number of employees")
         .rightYAxisLabel("Average Wage");
