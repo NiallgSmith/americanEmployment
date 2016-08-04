@@ -183,6 +183,7 @@ function introGraph(error, wagesJson) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Average wage per sector")
         .yAxisLabel("Dollars per hour")
+        ._rangeBandPadding(2)
         .valueAccessor(function (p) {
             // console.log(p)
             return p.value.total / p.value.count;
@@ -200,11 +201,13 @@ function introGraph(error, wagesJson) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Employment type")
+        ._rangeBandPadding(1)
         .compose([
             occupationBar
-                .gap(25),
+                .centerBar(true)
+                .gap(15),
             occwageLineChart.useRightYAxis(true)
-                
+
                 ])
         .yAxisLabel("Number of employees")
         .rightYAxisLabel("Average Wage");

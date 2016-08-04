@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a38e948a-4184-46d0-9d57-a4dfb27b336e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/graph.js" afterPath="$PROJECT_DIR$/static/js/graph.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="stream2final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/stream2final$stream2final.coverage" NAME="stream2final Coverage Results" MODIFIED="1470299491631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/stream2final$stream2final.coverage" NAME="stream2final Coverage Results" MODIFIED="1470300864093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="graph.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="206" column="16" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="16" />
+            <state relative-caret-position="413">
+              <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -915,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="206" column="16" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="16" />
+        <state relative-caret-position="413">
+          <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
           <folding />
         </state>
       </provider>
