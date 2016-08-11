@@ -7,10 +7,12 @@ import json
 app = Flask(__name__)
 
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'wagesdata'
-COLLECTION_NAME = 'wages'
+MONGODB_HOST = 'ds145295.mlab.com'
+MONGODB_PORT = 45295
+DBS_NAME = 'heroku_f5hxrt7w'
+COLLECTION_NAME = 'stats'
+MONGO_URI = 'mongodb://admin:admin@ds145295.mlab.com:45295/heroku_f5hxrt7w'
+
 FIELDS = {'ID':True,'WAGE':True,'OCCUPATION': True,'SECTOR':True, 'UNION':True,'EDUCATION':True,'EXPERIENCE':True, 'AGE':True, 'SEX':True, 'MARR':True, "RACE":True,"SOUTH":True, '_id':False }
 
 
@@ -20,7 +22,7 @@ def index():
 
 @app.route("/wages")
 def wages():
-    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     wages = collection.find(projection=FIELDS, limit=1000)
     json_wages = []
